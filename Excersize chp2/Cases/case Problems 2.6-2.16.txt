@@ -1,0 +1,104 @@
+/********************************************************
+2.6 Identify and fix the errors in the following code:
+1 public class Test {
+2 public static void main(String[] args) {
+3 int i = j = k = 2;
+4 System.out.println(i + " " + j + " " + k);
+5 }
+6 }
+//
+2.7 What are the benefits of using constants? Declare an int constant SIZE with value 20.
+//
+2.8 What are the naming conventions for class names, method names, constants, and
+variables? Which of the following items can be a constant, a method, a variable, or a
+class according to the Java naming conventions?
+MAX_VALUE, Test, read, readDouble
+//
+2.9 Translate the following algorithm into Java code:
+Step 1: Declare a double variable named miles with initial value 100.
+Step 2: Declare a double constant named KILOMETERS_PER_MILE with value
+1.609.
+Step 3: Declare a double variable named kilometers, multiply miles and
+KILOMETERS_PER_MILE, and assign the result to kilometers.
+Step 4: Display kilometers to the console.
+What is kilometers after Step 4?
+//
+2.10 Find the largest and smallest byte, short, int, long, float, and double. Which
+of these data types requires the least amount of memory?
+//
+2.11 Show the result of the following remainders.
+56 % 6
+78 % -4
+-34 % 5
+-34 % -5
+5 % 1
+1 % 5
+//
+2.12 If today is Tuesday, what will be the day in 100 days?
+//
+2.13 What is the result of 25 / 4? How would you rewrite the expression if you wished
+the result to be a floating-point number?
+//
+2.14 Show the result of the following code:
+System.out.println(2 * (5 / 2 + 5 / 2));
+System.out.println(2 * 5 / 2 + 2 * 5 / 2);
+System.out.println(2 * (5 / 2));
+System.out.println(2 * 5 / 2);
+//
+2.15 Are the following statements correct? If so, show the output.
+System.out.println("25 / 4 is " + 25 / 4);
+System.out.println("25 / 4.0 is " + 25 / 4.0);
+System.out.println("3 * 2 / 4 is " + 3 * 2 / 4);
+System.out.println("3.0 * 2 / 4 is " + 3.0 * 2 / 4);
+//
+2.16 Write a statement to display the result of 2^(3.5).
+********************************************************************/
+
+2.6: j and k have to be initilized 
+can be currected like this..
+int i=2, j=2,k=2
+OR
+int i =2;
+int j =2;
+int k =2;
+//
+2.7: 1- increase ease of use and readibility. 2- the value cannot be changed unless the line is changed
+ex.. final int SIZE =20;
+//
+2.8: 
+-constants ought to be ALL CAPS like MAX_VALUE
+-variables and method use camel toe (cap the first letter of every word after the first) like read readDouble
+-class the first letter of every word caped like Test.
+//
+2.9:
+in the main method...
+double miles = 100;
+final double KILOMETERS_PER_MILE=1.609;
+double kilometers = KILOMETERS_PER_MILE * miles;
+System.out.println(kilometers);
+//
+2.10:
+a byte.
+2.11:
+-respectivly.. 2,-2,-4,-4,0,1
+//
+2.12:
+-since next tuesday is in 7 days away. we can find out the day by getting the remainder of 100%7 which is 2, meaning two days after inluding a tuesday would be a Thursday.
+//
+2.13:
+-   6
+-write it one of the numbers(or both) as float,or cast them as a float.
+//
+2.14:
+-   8
+-   10
+-   4
+-   5
+//
+2.15:
+-    6
+-    6.25
+-    1
+-    1.5
+2.16:
+-System.out.println(Math.pow(2,3.5));
