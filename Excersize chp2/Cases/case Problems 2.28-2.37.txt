@@ -1,0 +1,63 @@
+/*******************************************************************************
+2.28 What does an explicit casting from a double to an int do with the fractional part of
+the double value? Does casting change the variable being cast?
+//
+2.29 Show the following output:
+float f = 12.5F;
+int i = (int)f;
+System.out.println("f is " + f);
+System.out.println("i is " + i);
+//
+2.30 If you change (int)(tax * 100) / 100.0 to (int)(tax * 100) / 100 in line
+11 in Listing 2.8, what will be the output for the input purchase amount of 197.55?
+//
+2.31 Show the output of the following code:
+double amount = 5;
+System.out.println(amount / 2);
+System.out.println(5 / 2);
+//
+2.32 How would you write the following arithmetic expression?
+(-b + sqrt(2b2 - 4ac))/2a
+//
+2.33 Show the output with the input value 1.99.
+//
+2.34 Can you declare a variable as int and later redeclare it as double?
+//
+2.35 What is an integer overflow? Can floating-point operations cause overflow?
+//
+2.36 Will overflow cause a runtime error?
+//
+2.37 What is a round-off error? Can integer operations cause round-off errors? Can
+floating-point operations cause round-off errors?
+/******************************************************************************
+2.28:
+it does not change the variable and it truncate any digit after the comma.
+2.29:
+f is 12.5
+i is 12
+
+2.30:
+-   11 
+2.31:
+-   2.5
+-   2
+2.32:
+(-b + Math.pow(b * b - 4 * a * c, 0.5)) / (2 * a)
+
+2.33:
+Enter an amount in double, for example 11.56: 1.99 
+Your amount 1.99 consists of 
+    1 dollars
+    3 quarters 
+    2 dimes
+    0 nickels
+    4 pennies
+2.34:
+- no
+2.35:
+- numbers are stored with a limited space in memory for each digit and symbol, so when it exceeds that memory when the number variable is initilized, it over flows. And no floating point operations will not cause overflow.
+2.36:
+No
+
+2.37:
+is the difference between a calculated approximation and its actual mathematical value. floating point operation may cause it.
