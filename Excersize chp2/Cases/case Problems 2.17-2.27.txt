@@ -1,0 +1,82 @@
+/****************************************************************
+2.17 Suppose m and r are integers. Write a Java expression for m(r)^2 to obtain a floatingpoint
+result.
+//
+2.18 How many accurate digits are stored in a float or double type variable?
+//
+2.19 Which of the following are correct literals for floating-point numbers?
+12.3, 12.3e+2, 23.4e-2, –334.4, 20.5, 39F, 40D
+//
+2.20 Which of the following are the same as 52.534?
+5.2534e+1, 0.52534e+2, 525.34e-1, 5.2534e+0
+//
+2.21 Which of the following are correct literals?
+5_2534e+1, _2534, 5_2, 5_
+//
+2.22 How would you write the following arithmetic expression in Java?
+a.(4/3(r + 34) )- 9(a + bc) + 3 + (d(2 + a)/(a + bd))
+b. 5.5 * (Math.pow((r + 2.5),2.5 + t))
+//
+2.23 How do you obtain the current second, minute, and hour?
+//
+2.24 Show the output of the following code:
+double a = 6.5;
+a += a + 1;
+System.out.println(a);
+a = 6;
+a /= 2;
+System.out.println(a);
+//
+2.25 Which of these statements are true?
+a. Any expression can be used as a statement.
+b. The expression x++ can be used as a statement.
+c. The statement x = x + 5 is also an expression.
+d. The statement x = y = x = 0 is illegal.
+//
+2.26 Show the output of the following code:
+int a = 6;
+int b = a++;
+System.out.println(a);
+System.out.println(b);
+a = 6;
+b = ++a;
+System.out.println(a);
+System.out.println(b);
+//
+2.27 Can different types of numeric values be used together in a computation?
+*****************************************************************/
+
+2.17:
+1.0 * m * (r * r);
+
+2.18:
+about 7 for a float and 12 for a double.
+2.19:
+All can be used as a floating point literal.
+2.20:
+The first, second and fourth are the same respectivily.
+2.21:
+5_2534e+1 and 5_2 are valid
+2.22:
+a.(4.0/3(r + 34) )- 9.0(a + bc) + 3 + (d(2 + a)/(a + bd))
+b. 5.5 * (Math.pow((r + 2.5),2.5 + t))
+2.23:
+long totalMills = System.currentTimeMillis();
+long totalSeconds = totalMills / 1000 ;
+long totalMinutes = totalSeconds / 60 ;
+currentSecond = totalSeconds % 60; 
+currentMinute= totalMinutes % 60;
+currentHour=(totalMinutes / 60 )% 24;
+2.24:
+-   14.0
+-   3.0
+2.25:
+ b &c 
+2.26:
+7
+6
+7
+7
+2.27:
+Yes. casting also can be used here to change a type temporarily daring a computation.
+
