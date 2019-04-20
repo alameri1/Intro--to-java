@@ -1,0 +1,65 @@
+/****************************************************
+3.21 Assume that x and y are int type. Which of the following are legal Java expressions?
+x > y > 0
+x = y && y
+x /= y
+x or y
+x and y
+(x != 0) || (x = 0)
+3.22 Are the following two expressions the same?
+a. x % 2 == 0 && x % 3 == 0
+b. x % 6 == 0
+//
+3.23 What is the value of the expression x >= 50 && x <= 100 if x is 45, 67, or 101?
+//
+3.24 Suppose, when you run the following program, you enter the input 2 3 6 from the
+console. What is the output?
+public class Test {
+public static void main(String[] args) {
+java.util.Scanner input = new java.util.Scanner(System.in);
+double x = input.nextDouble();
+double y = input.nextDouble();
+double z = input.nextDouble();
+System.out.println("(x < y && y < z) is " + (x < y && y < z));
+System.out.println("(x < y || y < z) is " + (x < y || y < z));
+System.out.println("!(x < y) is " + !(x < y));
+System.out.println("(x + y < z) is " + (x + y < z));
+System.out.println("(x + y > z) is " + (x + y > z));
+}
+}
+//
+3.25 Write a Boolean expression that evaluates to true if age is greater than 13 and less
+than 18.
+//
+3.26 Write a Boolean expression that evaluates to true if weight is greater than
+50 pounds or height is greater than 60 inches.
+//
+3.27 Write a Boolean expression that evaluates to true if weight is greater than
+50 pounds and height is greater than 60 inches.
+//
+3.28 Write a Boolean expression that evaluates to true if either weight is greater than
+50 pounds or height is greater than 60 inches, but not both.
+//
+3.29 What data types are required for a switch variable? If the keyword break is not
+used after a case is processed, what is the next statement to be executed? Can you
+convert a switch statement to an equivalent if statement, or vice versa? What are
+the advantages of using a switch statement?
+//
+3.30 What is y after the following switch statement is executed? Rewrite the code using
+an if-else statement.
+x = 3; y = 3;
+switch (x + 3) {
+case 6: y = 1;
+default: y += 1;
+}
+****************************************************/
+3.21:
+3.22:
+3.23:
+3.24:
+3.25:
+3.26:
+3.27:
+3.28:
+3.29:
+3.30:

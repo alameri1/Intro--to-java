@@ -1,0 +1,62 @@
+/****************************************************
+3.31 What is x after the following if-else statement is executed? Use a switch statement
+to rewrite it and draw the flowchart for the new switch statement.
+int x = 1, a = 3;
+if (a == 1)
+x += 5;
+else if (a == 2)
+x += 10;
+else if (a == 3)
+x += 16;
+else if (a == 4)
+x += 34;
+//
+3.32 Write a switch statement that displays Sunday, Monday, Tuesday, Wednesday,
+Thursday, Friday, Saturday, if day is 0, 1, 2, 3, 4, 5, 6, accordingly.
+//
+3.33 Suppose that, when you run the following program, you enter the input 2 3 6 from
+the console. What is the output?
+public class Test {
+public static void main(String[] args) {
+java.util.Scanner input = new java.util.Scanner(System.in);
+double x = input.nextDouble();
+double y = input.nextDouble();
+double z = input.nextDouble();
+System.out.println((x < y && y < z) ? "sorted" : "not sorted");
+}
+}
+//
+3.34 Rewrite the following if statements using the conditional operator.
+//
+3.35 Rewrite the following conditional expressions using if-else statements.
+a. score = (x > 10) ? 3 * scale : 4 * scale;
+b. tax = (income > 10000) ? income * 0.2 : income * 0.17 + 1000;
+c. System.out.println((number % 3 == 0) ? i : j);
+//
+3.36 Write conditional expression that returns -1 or 1 randomly.
+//
+3.37 List the precedence order of the Boolean operators. Evaluate the following expressions:
+true || true && false
+true && true || false
+//
+3.38 True or false? All the binary operators except = are left associative.
+//
+3.39 Evaluate the following expressions:
+2 * 2 - 3 > 2 && 4 – 2 > 5
+2 * 2 - 3 > 2 || 4 – 2 > 5
+//
+3.40 Is (x > 0 && x < 10) the same as ((x > 0) && (x < 10))? Is (x > 0 ||
+x < 10) the same as ((x > 0) || (x < 10))? Is (x > 0 || x < 10 && y
+< 0) the same as (x > 0 || (x < 10 && y < 0))?
+//
+****************************************************/
+3.31:
+3.32:
+3.33:
+3.34:
+3.35:
+3.36:
+3.37:
+3.38:
+3.39:
+3.40:
