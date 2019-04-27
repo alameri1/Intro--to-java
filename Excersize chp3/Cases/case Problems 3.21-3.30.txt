@@ -54,12 +54,31 @@ default: y += 1;
 }
 ****************************************************/
 3.21:
+-Not legal, comparing a boolean to zero
+-Not legal, assigning a boolean to an int type variable
+-Yes Legal
+-Not legal, should use ||
+-Not legal, should use &&
+-Not legal, assigning x to 0 in a boolean expression
 3.22:
+
+-True, they are the same
 3.23:
+false, true, false
 3.24:
+true,true,false,true,false
 3.25:
+boolean b =((age>13)&&(age<18))
 3.26:
+(weight>50) || (height>60)
+
 3.27:
+(weight>50) && (height>60)
+
 3.28:
+(weight>50) ^ (height>60)
+
 3.29:
+char, int, byte, short
 3.30:
+y=2

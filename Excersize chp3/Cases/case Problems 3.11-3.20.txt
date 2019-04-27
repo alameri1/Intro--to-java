@@ -61,5 +61,8 @@ Yes
 3.18:
 false, false,true,true,true,true
 3.19:
-bool=(num>1 && num)
+a) boolean more=(num>1 && num<100)
+b) boolean more=((num>1 && num<100 )|| (num<0))
 3.20:
+a) abs(x-5)<4.5
+b) abs(x-5)>4.5
