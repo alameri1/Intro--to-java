@@ -1,0 +1,261 @@
+\*****************************************************
+4.11 Evaluate the following:
+int i = '1';
+int j = '1' + '2' * ('4' - '3') + 'b' / 'a';
+int k = 'a';
+char c = 90;
+//
+4.12 Can the following conversions involving casting be allowed? If so, find the converted
+result.
+char c = 'A';
+int i = (int)c;
+float f = 1000.34f;
+int i = (int)f;
+double d = 1000.34;
+int i = (int)d;
+int i = 97;
+char c = (char)i;
+//
+4.13 Show the output of the following program:
+public class Test {
+public static void main(String[] args) {
+char x = 'a';
+char y = 'c';
+System.out.println(++x);
+System.out.println(y++);
+System.out.println(x - y);
+}
+}
+//
+4.14 Write the code that generates a random lowercase letter.
+//
+4.15 Show the output of the following statements:
+System.out.println('a' < 'b');
+System.out.println('a' <= 'A');
+System.out.println('a' > 'b');
+System.out.println('a' >= 'A');
+System.out.println('a' == 'a');
+System.out.println('a' != 'b');
+//
+4.16 Suppose that s1, s2, and s3 are three strings, given as follows:
+String s1 = "Welcome to Java";
+String s2 = "Programming is fun";
+String s3 = "Welcome to Java";
+What are the results of the following expressions?
+(a) s1 == s2
+(b) s2 == s3
+(c) s1.equals(s2)
+(d) s1.equals(s3)
+(e) s1.compareTo(s2)
+(f) s2.compareTo(s3)
+(g) s2.compareTo(s2)
+(h) s1.charAt(0)
+(i) s1.indexOf('j')
+(j) s1.indexOf("to")
+(k) s1.lastIndexOf('a')
+(l) s1.lastIndexOf("o", 15)
+(m) s1.length()
+(n) s1.substring(5)
+(o) s1.substring(5, 11)
+(p) s1.startsWith("Wel")
+(q) s1.endsWith("Java")
+(r) s1.toLowerCase()
+(s) s1.toUpperCase()
+(t) s1.concat(s2)
+(u) s1.contains(s2)
+(v) "\t Wel \t".trim()
+//
+4.17 Suppose that s1 and s2 are two strings. Which of the following statements or
+expressions are incorrect?
+String s = "Welcome to Java";
+String s3 = s1 + s2;
+String s3 = s1 - s2;
+s1 == s2;
+s1 >= s2;
+s1.compareTo(s2);
+int i = s1.length();
+char c = s1(0);
+char c = s1.charAt(s1.length());
+//
+4.18 Show the output of the following statements (write a program to verify your results):
+System.out.println("1" + 1);
+System.out.println('1' + 1);
+System.out.println("1" + 1 + 1);
+System.out.println("1" + (1 + 1));
+System.out.println('1' + 1 + 1);
+//
+4.19 Evaluate the following expressions (write a program to verify your results):
+1 + "Welcome " + 1 + 1
+1 + "Welcome " + (1 + 1)
+1 + "Welcome " + ('\u0001' + 1)
+1 + "Welcome " + 'a' + 1
+//
+4.20 Let s1 be " Welcome " and s2 be " welcome ". Write the code for the following
+statements:
+(a) Check whether s1 is equal to s2 and assign the result to a Boolean variable
+isEqual.
+(b) Check whether s1 is equal to s2, ignoring case, and assign the result to a
+Boolean variable isEqual.
+(c) Compare s1 with s2 and assign the result to an int variable x.
+(d) Compare s1 with s2, ignoring case, and assign the result to an int
+variable x.
+(e) Check whether s1 has the prefix AAA and assign the result to a Boolean
+variable b.
+(f) Check whether s1 has the suffix AAA and assign the result to a Boolean
+variable b.
+(g) Assign the length of s1 to an int variable x.
+(h) Assign the first character of s1 to a char variable x.
+(i) Create a new string s3 that combines s1 with s2.
+(j) Create a substring of s1 starting from index 1.
+(k) Create a substring of s1 from index 1 to index 4.
+(l) Create a new string s3 that converts s1 to lowercase.
+(m) Create a new string s3 that converts s1 to uppercase.
+(n) Create a new string s3 that trims whitespace characters on both ends of s1
+(o) Assign the index of the first occurrence of the character e in s1 to an int
+variable x.
+(p) Assign the index of the last occurrence of the string abc in s1 to an int
+variable x.
+//
+4.21 If you run Listing 4.3 GuessBirthday.java with input 1 for Set1, Set3, and Set4 and 0
+for Set2 and Set5, what will be the birthday?
+//
+4.22 What are the format specifiers for outputting a Boolean value, a character, a decimal
+integer, a floating-point number, and a string?
+//
+4.23 What is wrong in the following statements?
+(a) System.out.printf("%5d %d", 1, 2, 3);
+(b) System.out.printf("%5d %f", 1);
+(c) System.out.printf("%5d %f", 1, 2);
+//
+4.24 Show the output of the following statements.
+(a) System.out.printf("amount is %f %e\n", 32.32, 32.32);
+(b) System.out.printf("amount is %5.2%% %5.4e\n", 32.327, 32.32);
+(c) System.out.printf("%6b\n", (1 > 2));
+(d) System.out.printf("%6s\n", "Java");
+(e) System.out.printf("%-6b%s\n", (1 > 2), "Java");
+(f) System.out.printf("%6b%-8s\n", (1 > 2), "Java");
+
+*****************************************************/
+4.11:
+i= 49;j=49+50*(1)+1=100;k =97; c = 'z'
+4.12:
+i=65;i=1000;i=1000;
+
+4.13:
+b
+c
+-2
+4.14:
+First time compile:
+d
+g
+a
+u
+z
+Second time compile:
+t
+i
+t
+v
+v
+4.15:
+//replace comma but enter
+true,false,false,true,true,true
+4.16:
+a)false
+b)false
+c)false
+d)true
+e)7
+f)-7
+g)0
+h)W
+i)-1
+j)8
+k)14
+l)9
+m)15
+n)me to Java
+o)me to
+p) true
+q)true
+r)welcome to java
+s)WELCOME TO JAVA
+t)Welcome to JavaProgramming is fun
+u)false
+v)Wel
+4.17:
+String s = "Welcome to Java";
+Answer: Correct
+
+String s3 = s1 + s2;
+Answer: Correct
+
+String s3 = s1 - s2;
+Answer: Incorrect
+
+s1 == s2
+Answer: Correct 
+
+s1 >= s2
+Answer: Incorrect
+
+s1.compareTo(s2);
+Answer: Correct
+
+int i = s1.length();
+Answer: Correct
+
+char c = s1(0);
+Answer: Incorrect
+
+char c = s1.charAt(s1.length());
+Answer: Incorrect : it's out of bounds, even if the preceding problem is fixed.
+
+4.18:
+11
+50
+111
+12
+51
+4.19:
+1Welcome11
+1Welcome2
+1Welcome2
+1Welcomea1
+4.20:
+(a) boolean isEqual = s1.equals(s2);
+(b) boolean isEqual = s1.equalsIgnoreCase(s2);
+(c) int x = s1.compareTo(s2);
+(d) int x = s1.compareToIgnoreCase(s2);
+(e) boolean b = s1.startsWith("AAA");
+(f) boolean b = s1.endsWith("AAA");
+(g) int x = s1.length();
+(h) char x = s1.charAt(0);
+(i) String s3 = s1 + s2;
+(j) String s3 = s1.substring(1);
+(k) String s3 = s1.substring(1, 5);
+(l) String s3 = s1.toLowerCase();
+(m) String s3 = s1.toUpperCase();
+(n) String s3 = s1.trim();
+(o) int x = s1.indexOf('e');
+(p) int x = s1.lastIndexOf("abc");
+4.21:
+13
+4.22:
+%b for boolean
+%c for char
+%d for double
+%f for float
+%s for string
+4.23:
+a) a third value has no specfier
+b)one item vs two specifiers
+c)The data for %f must a floating-point value. 
+4.24:
+a) amount is 32.320000 2.232000e+01
+b)amount is 32.3200 2.2320e+01
+c)*square Box*false
+d)*square Box**square Box*Java
+e)false *square Box**square Box**square Box**square Box*Java
+f)*square Box*falseJava

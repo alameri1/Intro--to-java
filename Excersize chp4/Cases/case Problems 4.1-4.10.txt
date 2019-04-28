@@ -1,0 +1,115 @@
+\*****************************************************
+4.1 Evaluate the following method calls: ?Point Check
+(a) Math.sqrt(4)
+(b) Math.sin(2 * Math.PI)
+(c) Math.cos(2 * Math.PI)
+(d) Math.pow(2, 2)
+(e) Math.log(Math.E)
+(f) Math.exp(1)
+(g) Math.max(2, Math.min(3, 4))
+(h) Math.rint(-2.5)
+(i) Math.ceil(-2.5)
+(j) Math.floor(-2.5)
+(k) Math.round(-2.5f)
+(l) Math.round(-2.5)
+(m) Math.rint(2.5)
+(n) Math.ceil(2.5)
+(o) Math.floor(2.5)
+(p) Math.round(2.5f)
+(q) Math.round(2.5)
+(r) Math.round(Math.abs(-2.5))
+//
+4.2 True or false? The argument for trigonometric methods is an angle in radians.
+//
+4.3 Write a statement that converts 47 degrees to radians and assigns the result to a
+variable.
+//
+4.4 Write a statement that converts p / 7 to an angle in degrees and assigns the result
+to a variable.
+//
+4.5 Write an expression that obtains a random integer between 34 and 55. Write an
+expression that obtains a random integer between 0 and 999. Write an expression
+that obtains a random number between 5.5 and 55.5.
+//
+4.6 Why does the Math class not need to be imported?
+//
+4.7 What is Math.log(Math.exp(5.5))? What is Math.exp(Math.log(5.5))?
+What is Math.asin(Math.sin(Math.PI / 6))? What is Math.sin(Math.
+asin(Math.PI / 6))?
+//
+4.8 Use print statements to find out the ASCII code for '1', 'A', 'B', 'a', and 'b'.
+Use print statements to find out the character for the decimal codes 40, 59, 79, 85,
+and 90. Use print statements to find out the character for the hexadecimal code 40,
+5A, 71, 72, and 7A.
+//
+4.9 Which of the following are correct literals for characters?
+'1', '\u345dE', '\u3fFa', '\b', '\t'
+//
+4.10 How do you display the characters \ and "?
+*****************************************************/
+4.1:
+a)2.0
+b)0
+c)1
+d)4.0
+e)1
+f)2.718
+g)3
+h)-2.0
+i)-2.0
+j)-3.0
+k)-2
+l)-2
+m)2.0
+n)3.0
+o)2.0
+p)3
+q)-2
+r)3
+
+
+4.2:
+true
+
+4.3:
+Enter degrees: 47
+Conversion of 47.0 degrees to radians: 0.8203047484373349
+
+4.4:
+angle in deegrees: 25.714285714285715
+4.5:
+A random integer between 34 and 55:48
+A random integer between 0 and 999:97
+A random integer between 5.5 and 55.5:47
+4.6:
+e = 2.718281828459045
+pi= 3.141592653589793
+4.7:
+5.5
+5.5
+0.5235987755982988
+0.5235987755982988
+4.8:
+//ascII
+System.out.println((int)'1');
+System.out.println((int)'A');
+System.out.println((int)'B');
+System.out.println((int)'a');
+System.out.println((int)'b');
+//char code
+System.out.println((char)40);
+System.out.println((char)59);
+System.out.println((char)79);
+System.out.println((char)85);
+System.out.println((char)90);
+//Hex
+System.out.println((char)0x40);
+System.out.println((char)0x59);
+System.out.println((char)0x79);
+System.out.println((char)0x85);
+System.out.println((char)0x90);
+4.9:
+'\u3fFa' is only valid
+4.10:
+"\\"
+"\""
