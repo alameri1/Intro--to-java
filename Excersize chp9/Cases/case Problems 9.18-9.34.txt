@@ -1,0 +1,182 @@
+\*****************************************************
+9.18 Add the static keyword in the place of ? if appropriate.
+public class Test {
+int count;
+public ? void main(String[] args) {
+...
+}
+public ? int getCount() {
+return count;
+}
+public ? int factorial(int n) {
+int result = 1;
+for (int i = 1; i <= n; i++)
+result *= i;
+return result;
+}
+}
+//
+9.19 Can you invoke an instance method or reference an instance variable from a static
+method? Can you invoke a static method or reference a static variable from an
+instance method? What is wrong in the following code?
+1 public class C {
+2 public static void main(String[] args) {
+3 method1();
+4 }
+5
+6 public void method1() {
+7 method2();
+8 }
+9
+10 public static void method2() {
+11 System.out.println("What is radius " + c.getRadius());
+12 }
+13
+14 Circle c = new Circle();
+15 }
+//
+9.20 What is an accessor method? What is a mutator method? What are the naming conventions
+for accessor methods and mutator methods?
+//
+9.21 What are the benefits of data field encapsulation?
+//
+9.22 In the following code, radius is private in the Circle class, and myCircle is an
+object of the Circle class. Does the highlighted code cause any problems? If so,
+explain why.
+public class Circle {
+private double radius = 1;
+/** Find the area of this circle */
+public double getArea() {
+return radius * radius * Math.PI;
+}
+public static void main(String[] args) {
+Circle myCircle = new Circle();
+System.out.println("Radius is " + myCircle.radius);
+}
+}
+//
+9.23 Describe the difference between passing a parameter of a primitive type and passing
+a parameter of a reference type. Show the output of the following programs:
+//
+9.24 Show the output of the following program:
+public class Test {
+public static void main(String[] args) {
+Circle circle1 = new Circle(1);
+Circle circle2 = new Circle(2);
+swap1(circle1, circle2);
+System.out.println("After swap1: circle1 = " +
+circle1.radius + " circle2 = " + circle2.radius);
+swap2(circle1, circle2);
+System.out.println("After swap2: circle1 = " +
+circle1.radius + " circle2 = " + circle2.radius);
+}
+public static void swap1(Circle x, Circle y) {
+Circle temp = x;
+x = y;
+y = temp;
+}
+public static void swap2(Circle x, Circle y) {
+double temp = x.radius;
+x.radius = y.radius;
+y.radius = temp;
+}
+}
+class Circle {
+double radius;
+Circle(double newRadius) {
+radius = newRadius;
+}
+}
+//
+9.25 Show the output of the following code:
+//
+9.26 What is the output of the following programs?
+//
+
+9.27 What is wrong in the following code?
+1 public class Test {
+2 public static void main(String[] args) {
+3 java.util.Date[] dates = new java.util.Date[10];
+4 System.out.println(dates[0]);
+5 System.out.println(dates[0].toString());
+6 }
+7 }
+//
+9.28 If a class contains only private data fields and no setter methods, is the class immutable?
+//
+9.29 If all the data fields in a class are private and of primitive types, and the class doesn’t
+contain any setter methods, is the class immutable?
+//
+9.30 Is the following class immutable?
+public class A {
+private int[] values;
+public int[] getValues() {
+return values;
+}
+}
+//
+9.31 What is the output of the following program?
+public class Test {
+private static int i = 0;
+private static int j = 0;
+public static void main(String[] args) {
+int i = 2;
+int k = 3;
+{
+int j = 3;
+System.out.println("i + j is " + i + j);
+}
+k = i + j;
+System.out.println("k is " + k);
+System.out.println("j is " + j);
+}
+}
+//
+9.32 Describe the role of the this keyword.
+//
+9.33 What is wrong in the following code?
+1 public class C {
+2 private int p;
+3
+4 public C() {
+5 System.out.println("C's no-arg constructor invoked");
+6 this(0);
+7 }
+8
+9 public C(int p) {
+10 p = p;
+11 }
+12
+13 public void setP(int p) {
+14 p = p;
+15 }
+16 }
+//
+9.34 What is wrong in the following code?
+public class Test {
+private int id;
+public void m1() {
+this.id = 45;
+}
+public void m2() {
+Test.id = 45;
+}
+}
+*****************************************************/
+9.18:
+9.19:
+9.20:
+9.21:
+9.22:
+9.23:
+9.24:
+9.25:
+9.26:
+9.27:
+9.28:
+9.29:
+9.30:
+9.31:
+9.32:
+9.33:
+9.34:

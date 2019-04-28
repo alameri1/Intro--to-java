@@ -1,0 +1,167 @@
+\*****************************************************
+11.1 True or false? A subclass is a subset of a superclass.
+//
+11.2 What keyword do you use to define a subclass?
+//
+11.3 What is single inheritance? What is multiple inheritance? Does Java support multiple
+inheritance?
+//
+11.4 What is the output of running the class C in (a)? What problem arises in compiling the
+program in (b)?
+//
+11.5 How does a subclass invoke its superclass’s constructor?
+//
+11.6 True or false? When invoking a constructor from a subclass, its superclass’s no-arg
+constructor is always invoked.
+//
+11.7 True or false? You can override a private method defined in a superclass.
+//
+11.8 True or false? You can override a static method defined in a superclass.
+//
+11.9 How do you explicitly invoke a superclass’s constructor from a subclass?
+//
+11.10 How do you invoke an overridden superclass method from a subclass?
+//
+Identify the problems in the following code:
+ 1  public class Circle {
+ 2    private double radius;
+ 3
+ 4    public Circle(double radius) {
+ 5      radius = radius;
+ 6    }
+ 7
+ 8    public double getRadius() {
+ 9      return radius;
+10    }
+11
+12    public double getArea() {
+13      return radius * radius * Math.PI;
+14    }
+15  }
+16
+17  class B extends Circle {
+18    private double length;
+19
+20    B(double radius, double length) {
+21      Circle(radius);
+22      length = length;
+23    }
+24
+25    @Override
+26    public double getArea() {
+27      return getArea() * length;
+28    }
+29  }
+//
+11.12 Explain the difference between method overloading and method overriding.
+//
+11.13 If a method in a subclass has the same signature as a method in its superclass with the
+same return type, is the method overridden or overloaded?
+//
+11.14 If a method in a subclass has the same signature as a method in its superclass with a
+different return type, will this be a problem?
+//
+11.15 If a method in a subclass has the same name as a method in its superclass with different
+parameter types, is the method overridden or overloaded?
+//
+11.16 What is the benefit of using the @Override annotation?
+//
+11.17 What is polymorphism? What is dynamic binding?
+//
+11.18 Describe the difference between method matching and method binding.
+//
+11.19 Can you assign new int[50], new Integer[50], new String[50], or new
+Object[50], into a variable of Object[] type?
+//
+11.20 What is wrong in the following code?
+1 public class Test {
+2 public static void main(String[] args) {
+3 Integer[] list1 = {12, 24, 55, 1};
+4 Double[] list2 = {12.4, 24.0, 55.2, 1.0};
+5 int[] list3 = {1, 2, 3};
+6 printArray(list1);
+7 printArray(list2);
+8 printArray(list3);
+9 }
+10
+11 public static void printArray(Object[] list) {
+12 for (Object o: list)
+13 System.out.print(o + " ");
+14 System.out.println();
+15 }
+16 }
+//
+11.21 Show the output of the following code:
+
+*****************************************************/
+11.1:
+False. 
+A subclass is an extension of a superclass and normally contains more details information than its superclass.
+11.2:
+The extends keyword is used to define a subclass that extends a superclass.
+11.3:
+Single inheritance allows a subclass to extend only one superclass. Multiple inheritance allows a subclass to extend multiple classes. Java does not allow multiple inheritance.
+11.4:
+(a) The output is
+            A's no-arg constructor is invoked 
+            
+(b) The default constructor of B attempts to invoke the default of constructor of A, but class A's default constructor is not defined.
+11.5:
+A subclass can explicitly invoke a suplerclass's constructor using the super keyword.
+11.6:
+False. 
+If a subclass's constructor explicitly invoke a superclass's constructor, the superclass's no-arg constructor is not invoked.
+11.7:
+False. 
+You can only override accessible instance methods.
+11.8:
+False. 
+You can only override accessible instance methods.
+11.9:
+Use super() or super(args). This statement must be the first in the constructor in the subclass.
+11.10:
+Use super.method() or super.method(args).
+11.11:
+The following lines are erroneous:
+{  
+  radius = radius; // Must use this.radius = radius
+}
+
+class B extends Circle {
+  Circle(radius);  // Must use super(radius)
+  length = length; // Must use this.length = length
+}
+
+public double getArea() {
+  return getArea() * length; // super.getArea()
+}
+11.12:
+Method overloading defines methods of the same name in a class. Method overriding modifies the methods that are defined in the superclasses.
+11.13:
+It is method overridden.
+11.14:
+It will be a problem if the return type is not a compatible return type.
+11.15:
+It is method overloading.
+11.16:
+It forces the compiler to check the signature of the overridden method to ensure that the method is defined correctly.
+11.17:
+ In simple terms, polymorphism means that a variable of a supertype can refer to a subtype object.
+A method may be implemented in several classes along the inheritance chain. The JVM decides which method is invoked at runtime. This is known as dynamic binding.
+11.18:
+Matching a method signature and binding a method implementation are two separate issues. The declared type of the reference variable decides which method to match at compile time. The compiler finds a matching method according to parameter type, number of parameters, and order of the parameters at compile time. A method may be implemented in several subclasses. The JVM dynamically binds the implementation of the method at runtime, decided by the actual class of the object referenced by the variable.
+11.19:
+new int[50] cannot be assigned to into a variable of Object[] type, but new Integer[50], new String[50], or new Object[50] are fine.
+11.20:
+Line 8 causes a compile error, because int[] cannot be passed to Object[].
+11.21:
+(a)
+Person
+Student
+
+(b)
+Person
+Person
+For (a), new Person().printPerson() invokes the printPerson() method definedin the Person class, which then invokes the getInfo() method in the Person class.new Student().printPerson() invokes the printPerson() method definedin the Person class, which then invokes the getInfo() method in the Student class, because the calling object is a Student. 
+
+For (b), new Student().printPerson() invokes the printPerson() method definedin the Person class, which then invokes the getInfo() method in the Person class. It does not invoke the getInfo() method in the Student class, because it is private and can only be invoked from a method in the Student class. Note that the getInfo() method is not overridden because it is private. You can only override a non-private method such as getInfo() in (a).

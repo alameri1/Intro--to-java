@@ -1,0 +1,315 @@
+\*****************************************************
+11.22 Show the output of following program:
+1 public class Test {
+2 public static void main(String[] args) {
+3 A a = new A(3);
+4 }
+5 }
+6
+7 class A extends B {
+8 public A(int t) {
+9 System.out.println("A's constructor is invoked");
+10 }
+11 }
+12
+13 class B {
+14 public B() {
+15 System.out.println("B's constructor is invoked");
+16 }
+17 }
+Is the no-arg constructor of Object invoked when new A(3) is invoked?
+//
+11.23 Show the output of following program:
+public class Test {
+public static void main(String[] args) {
+new A();
+new B();
+}
+}
+//
+class A {
+int i = 7;
+public A() {
+setI(20);
+System.out.println("i from A is " + i);
+}
+public void setI(int i) {
+this.i = 2 * i;
+}
+}
+class B extends A {
+public B() {
+System.out.println("i from B is " + i);
+}
+public void setI(int i) {
+this.i = 3 * i;
+}
+}
+//
+11.24 Indicate true or false for the following statements:
+¦ You can always successfully cast an instance of a subclass to a superclass.
+¦ You can always successfully cast an instance of a superclass to a subclass.
+//
+11.25 For the GeometricObject and Circle classes in Listings 11.1 and 11.2, answer the
+following questions:
+a. Assume are circle and object created as follows:
+Circle circle = new Circle(1);
+GeometricObject object = new GeometricObject();
+Are the following Boolean expressions true or false?
+(circle instanceof GeometricObject)
+(object instanceof GeometricObject)
+(circle instanceof Circle)
+(object instanceof Circle)
+b. Can the following statements be compiled?
+Circle circle = new Circle(5);
+GeometricObject object = circle;
+c. Can the following statements be compiled?
+GeometricObject object = new GeometricObject();
+Circle circle = (Circle)object;
+//
+11.26 Suppose that Fruit, Apple, Orange, GoldenDelicious, and McIntosh are
+defined in the following inheritance hierarchy:
+Assume that the following code is given:
+Fruit fruit = new GoldenDelicious();
+Orange orange = new Orange();
+Answer the following questions: 
+a.	Is fruit instanceof Fruit? 
+b.	Is fruit instanceof Orange? 
+c.	Is fruit instanceof Apple? 
+d.	Is fruit instanceof GoldenDelicious? 
+e.	Is fruit instanceof McIntosh? 
+f.	Is orange instanceof Orange? 
+g.	Is orange instanceof Fruit? 
+h.	Is orange instanceof Apple? 
+i.	Suppose the method makeAppleCider is defined in the Apple class. Can fruit invoke this method? Can orange invoke this method? 
+j.	Suppose the method makeOrangeJuice is defined in the Orange class. Can orange invoke this method? Can fruit invoke this method? 
+k.	Is the statement Orange p = new Apple() legal? 
+l.	Is the statement McIntosh p = new Apple() legal? 
+m.	Is the statement Apple p = new McIntosh() legal? 
+//
+11.27 What is wrong in the following code?
+1 public class Test {
+2 public static void main(String[] args) {
+3 Object fruit = new Fruit();
+4 Object apple = (Apple)fruit;
+5 }
+6 }
+7
+8 class Apple extends Fruit {
+9 }
+10
+11 class Fruit {
+12 }
+//
+11.28 Does every object have a toString method and an equals method? Where do they
+come from? How are they used? Is it appropriate to override these methods?
+//
+11.29 When overriding the equals method, a common mistake is mistyping its signature
+in the subclass. For example, the equals method is incorrectly written as
+equals(Circle circle), as shown in (a) in following the code; instead, it should
+be equals(Object circle), as shown in (b). Show the output of running class
+Test with the Circle class in (a) and in (b), respectively.
+//
+11.30 How do you do the following?
+a. Create an ArrayList for storing double values?
+b. Append an object to a list?
+c. Insert an object at the beginning of a list?
+d. Find the number of objects in a list?
+e. Remove a given object from a list?
+f. Remove the last object from the list?
+g. Check whether a given object is in a list?
+h. Retrieve an object at a specified index from a list?
+//
+11.31 Identify the errors in the following code.
+ArrayList<String> list = new ArrayList<>();
+list.add("Denver");
+list.add("Austin");
+list.add(new java.util.Date());
+String city = list.get(0);
+list.set(3, "Dallas");
+System.out.println(list.get(3));
+//
+11.32 Suppose the ArrayList list contains {"Dallas", "Dallas", "Houston",
+"Dallas"}. What is the list after invoking list.remove("Dallas") one time?
+Does the following code correctly remove all elements with value "Dallas" from
+the list? If not, correct the code.
+for (int i = 0; i < list.size(); i++)
+list.remove("Dallas");
+//
+11.33 Explain why the following code displays [1, 3] rather than [2, 3].
+ArrayList<Integer> list = new ArrayList<>();
+list.add(1);
+list.add(2);
+list.add(3);
+list.remove(1);
+System.out.println(list);
+//
+11.34 Explain why the following code is wrong.
+ArrayList<Double> list = new ArrayList<>();
+list.add(1);
+//
+11.35 Correct errors in the following statements:
+int[] array = {3, 5, 95, 4, 15, 34, 3, 6, 5};
+ArrayList<Integer> list = new ArrayList<>(Arrays.asList(array));
+//
+11.36 Correct errors in the following statements:
+int[] array = {3, 5, 95, 4, 15, 34, 3, 6, 5};
+System.out.println(java.util.Collections.max(array));
+//
+11.37 What modifier should you use on a class so that a class in the same package can
+access it, but a class in a different package cannot access it?
+//
+11.38 What modifier should you use so that a class in a different package cannot access the
+class, but its subclasses in any package can access it?
+//
+11.39 In the following code, the classes A and B are in the same package. If the question
+marks in (a) are replaced by blanks, can class B be compiled? If the question marks
+are replaced by private, can class B be compiled? If the question marks are replaced
+by protected, can class B be compiled?
+//
+11.40 In the following code, the classes A and B are in different packages. If the question
+marks in (a) are replaced by blanks, can class B be compiled? If the question marks
+are replaced by private, can class B be compiled? If the question marks are replaced
+by protected, can class B be compiled?
+//
+11.41 How do you prevent a class from being extended? How do you prevent a method from
+being overridden?
+//
+11.42 Indicate true or false for the following statements:
+a. A protected datum or method can be accessed by any class in the same package.
+b. A protected datum or method can be accessed by any class in different packages.
+c. A protected datum or method can be accessed by its subclasses in any package.
+d. A final class can have instances.
+e. A final class can be extended.
+f. A final method can be overridden.
+*****************************************************/
+11.22:
+B's constructor is invoked
+A's constructor is invoked
+The default constructor of Object is invoked, when new A(3) is invoked. The Object's constructor is invoked before any statements in B's constructor are executed.
+11.23:
+i from A is 40
+i from A is 60
+i from B is 60
+11.24:
+Apple constructor with weight
+Apple no-arg constructor
+Apple: 1.0
+---------------
+Apple constructor with weight
+GoldenDelicious constructor with weight
+GoldenDelicious: 7.0
+---------------
+Apple constructor with weight
+GoldenDelicious constructor with weight
+GoldenDelicious: 8.0
+11.25:
+(a) True. You can always successfully cast an instance of a subclass to a superclass. for example, casting apple to fruit is fine. 
+(b) False. You cannot always successfully cast an instance of a superclass to a subclass. For example, casting fruit to apple is not always succeful unless a fruit is an apple.
+11.26:
+(a)
+(circle instanceof GeometricObject1) => true
+(object instanceof GeometricObject1) => true
+(circle instanceof Circle1) => true
+(object instanceof Circle1) => false
+
+(b)
+Yes, because you can always cast from subclass to superclass.
+
+(c)
+Causing a runtime exception (ClassCastExcpetion)
+11.26:
+a. Is fruit instanceof Fruit true?	true 
+b. Is fruit instanceof Orange true?	false 
+c. Is fruit instanceof Apple true?	true 
+d. Is fruit instanceof GoldDelicious true? true, because new GoldenDelicious() is assigned to fruit. The actual type for fruit at runtime is GoldenDelious. 
+e. Is fruit instanceof Macintosh true?	false 
+f. Is orange instanceof Orange true?	true 
+g. Is orange instanceof Fruit true?	true 
+h. Is orange instanceof Apple true?	false 
+i. Suppose the method makeApple is defined in the Apple class. Can fruit invoke this method? No. It will give a compile error. However, you can invoke it using ((Apple)fruit).makeAppleCider(). 
+Can orange invoke this method? No 
+j. Suppose the method makeOrangeJuice is defined in the Orange class. Can orange invoke this method? Yes. 
+Can fruit invoke this method?	No. 
+k. Is the statement Orange p = new Apple() legal? No 
+l. Is the statement Macintosh p = new Apple() legal? No 
+m. Is the statement Apple p = new Macintosh() legal? Yes
+11.27:
+Object apple = (Apple)fruit;
+Causes a runtime ClassCastingException.
+11.28:
+Yes, because these two methods are defined in the Object class; therefore, they are available to all Java classes. The subclasses usually override these methods to provide specific information for these methods.
+
+The toString() method returns a string representation of the object; the equals() method compares the contents of two objects to determine whether they are the same.
+11.29:
+The output is false if the Circle class in (a) is used. The Circle class has two overloaded methods: equals(Circle circle) defined in the Circle class and equals(Object o) defined in the Object class, inherited by the Circle class. At compile time, circle1.equals(circle2) is matched to equals(Object o), because the declared type for circle1 and circle2 is Object. (Note that either the declared type for circle1 and circle2 is Object would cause circle1.equals(circle2) to match circle1.equals(Object circle) by the compiler. 
+
+The output is true if the Circle class in (b) is used. The Circle class overrides the equals(Object o) method defined in the Object class. At compile time, circle1.equals(circle2) is matched to equals(Object o) and at runtime the equals(Object o) method implemented in the Circle class is invoked. 
+
+In (a), method equals(Object o) is used at both compile time and run time. circle1 and circle2 have different addresses, leading to "false" output. Method overriding follows dynamic binding (determined by the actual type), but method overloading is always determined by the declared type. 
+
+What would be the output if Object is replaced by Circle in the Test class using the Circle class in (a) and (b), respectively? The output would be true for (a), because circle1.equals(circle2) matches circle1.equals(Circle object) exactly in this case. The output would be true for (b) because equals(Object c) is overridden in the Circle class. 
+
+With circle1.equals(circle2) replaced by circle1.equals("Binding") and using the the Circle class in (a), the equals method in the Object class is used,circle1.equals(circle2) returns false. 
+
+With circle1.equals(circle2) replaced by circle1.equals("Binding") and using the the Circle class in (b), the equals method in the Circle class is used,since it casts string "Binding" to Circle, it throws a casting exception. 
+(b) should be reimplemented as follows to to avoid a runtime error when comparing circle with a non-circle object.
+class Circle {
+  double radius;
+
+  public boolean equals(Object o) {
+    if (o instanceof Circle)
+      return this.radius == ((Circle)o).radius;    
+    else
+      return false;
+  }
+}
+11.30:
+(a) ArrayList<Double> list = new ArrayList<Double>(); 
+(b) list.add(object); 
+(c) list.add(0, object); 
+(d) list.size(); 
+(e) list.remove(object); 
+(f) list.remove(list.size() - 1); 
+(g) list.contains(object); 
+(h) list.get(index); 
+11.31:
+Error 1: list.add(new java.util.Date()); is wrong, because it is an array list of strings. You cannot add Date objects to this list. 
+Error 2: list.set(3, "Dallas"); is wrong because there is no element at index 3 in the list. 
+Error 3: list.get(3) is wrong because there is no element at index 3 in the list.
+11.32:
+After list.remove("Dallas"), the list becomes {"Dallas", "Houston", "Dallas"}. No. Here is the reason: Suppose the list contains two string elements "red" and "red". You want to remove "red" from the list. After the first "red" is removed, i becomes 1 and the list becomes {"red"}. i < list.size() is false. So the loop ends. The correct code should be
+for (int i = 0; i < list.size(); i++) {
+  if (list.remove(element))
+    i--;
+}
+11.33:
+The ArrayList class has two overloaded remove method remove(Object) and remove(int index). The latter is invoked for list.remove(1) to remove the element in the list at index 1. 
+To remove value 3 from the list, use list.remove(new Integer(3)).
+11.34:
+list consists of Double objects. list.add(1) automatically converts 1 into an Integer object. It will work if you change it to list.add(1.0).
+11.35:
+To use asList(array), array must be an array of objects.
+11.36:
+To use Collections.max(array), array must be an ArrayList, not an array.
+11.37:
+default visibility modifier
+11.38:
+protected
+11.39:
+If the question marks are replaced by blanks, can class B be compiled? Yes. 
+If the question marks are replaced by private, can class B be compiled? No. 
+If the question marks are replaced by protected, can class B be compiled? Yes.
+11.40:
+If the question marks are replaced by blanks, can class B be compiled? No. 
+If the question marks are replaced by private, can class B be compiled? No. 
+If the question marks are replaced by protected, can class B be compiled? Yes.
+11.41:
+Use the final keyword.
+11.42:
+a.	True. 
+b.	False. (But yes in a subclass that extends the class where the protected datum is defined.) 
+c.	True. 
+d.	Answer: True 
+e.	Answer: False 
+f.	Answer: False 

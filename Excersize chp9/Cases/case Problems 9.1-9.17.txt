@@ -1,0 +1,145 @@
+\*****************************************************
+9.1 Describe the relationship between an object and its defining class.
+//
+9.2 How do you define a class?
+//
+9.3 How do you declare an object’s reference variable?
+//
+9.4 How do you create an object?
+//
+9.5 What are the differences between constructors and methods?
+//
+9.6 When will a class have a default constructor?
+//
+9.7 Which operator is used to access a data field or invoke a method from an object?
+//
+9.8 What is an anonymous object?
+//
+9.9 What is NullPointerException?
+//
+9.10 Is an array an object or a primitive type value? Can an array contain elements of an
+object type? Describe the default value for the elements of an array.
+//
+9.11 What is wrong with each of the following programs?
+//
+9.12 What is wrong in the following code?
+1 class Test {
+2 public static void main(String[] args) {
+3 A a = new A();
+4 a.print();
+5 }
+6 }
+7
+8 class A {
+9 String s;
+10
+11 A(String newS) {
+12 s = newS;
+13 }
+14
+15 public void print() {
+16 System.out.print(s);
+17 }
+18 }
+//
+9.13 What is the output of the following code?
+public class A {
+boolean x;
+public static void main(String[] args) {
+A a = new A();
+System.out.println(a.x);
+}
+}
+//
+9.14 How do you create a Date for the current time? How do you display the current time?
+//
+9.15 How do you create a Point2D? Suppose p1 and p2 are two instances of Point2D?
+How do you obtain the distance between the two points?
+//
+9.16 Which packages contain the classes Date, Random, Point2D, System, and Math?
+//
+9.17 Suppose that the class F is defined in (a). Let f be an instance of F. Which of the
+statements in (b) are correct?
+*****************************************************/
+9.1:
+See the section "Defining Classes for Objects."
+9.2:
+The syntax to define a class is
+public class ClassName {
+}
+
+9.3:
+The syntax to declare a reference variable for an object is
+ClassName v;
+
+9.4:
+The syntax to create an object is
+new ClassName();
+9.5:
+Constructors are special kinds of methods that are called when creating an object using the new operator. Constructors do not have a return type-not even void.
+9.6:
+A class has a default constructor only if the class does not define any constructor.
+9.7:
+The member access operator is used to access a data field or invoke a method from an object.
+9.8:
+An anonymous object is the one that does not have a reference variable referencing it.
+9.9:
+A NullPointerException occurs when a null reference variable is used to access the members of an object.
+9.10:
+An array is an object. An array can contain elements of an object type. The default value for the elements of an array is 0 for numeric, false for boolean, '\u0000' for char, null for object element type.
+9.11:
+(a) There is no such constructor ShowErrors(int) in the ShowErrors class.The ShowErrors class in the book has a default constructor. It is actually same as
+public class ShowErrors {
+  public static void main(String[] args) {
+    ShowErrors t = new ShowErrors(5);
+  }
+            
+  public ShowErrors () {
+  }
+}
+On Line 3, new ShowErrors(5) attempts to create an instance using a constructor ShowErrors(int), but the ShowErrors class does not have such a constructor. That is an error.
+(b) x() is not a method in the ShowErrors class.The ShowErrors class in the book has a default constructor. It is actually same as
+public class ShowErrors {
+  public static void main(String[] args) {
+    ShowErrors t = new ShowErrors();
+    t.x();
+  }
+  public ShowErrors () {
+  }
+}
+On Line 4, t.x() is invoked, but the ShowErrors class does not have the method named x(). That is an error.(c) The program compiles fine, but it has a runtime error because variable c is null when the println statement is executed. 
+(d) new C(5.0) does not match any constructors in class C. The program has a compilation error because class C does not have a constructor with a double argument.
+9.12:
+The program does not compile because new A() is used in class Test, but class A does not have a default constructor. See the second NOTE in the Section, "Constructors."
+9.13:
+false
+9.14:
+Use the Date's no-arg constructor to create a Date for the current time. Use the Date's toString() method to display a string representation for the Date.
+9.15:
+You can create a Point2D object using its constructor Point2D(x, y) for a point at (x, y). Use p1.distance(p2) to obtain the distance between p1 and p2. Use p1.midPoint(p2) to obtain the mid-point between p1 and p2.
+9.16:
+Date is in the java.util package. Random is in the java.util package. Point2D is in the javafx.geometry package. System and Math are in the java.lang package.
+9.17:
+System.out.println(f.i);
+Answer: Correct
+
+System.out.println(f.s);
+Answer: Correct
+
+f.imethod();
+Answer: Correct
+
+f.smethod();
+Answer: Correct
+
+System.out.println(F.i);
+Answer: Incorrect
+
+System.out.println(F.s);
+Answer: Correct
+
+F.imethod();
+Answer: Incorrect
+
+F.smethod();
+Answer: Correct
