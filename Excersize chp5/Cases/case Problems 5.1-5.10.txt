@@ -1,0 +1,122 @@
+\*****************************************************
+5.1 Analyze the following code. Is count < 100 always true, always false, or sometimes
+true or sometimes false at Point A, Point B, and Point C?
+int count = 0;
+while (count < 100) {
+// Point A
+System.out.println("Welcome to Java!");
+count++;
+// Point B
+}
+// Point C
+///
+5.2 What is wrong if guess is initialized to 0 in line 11 in Listing 5.3?
+//
+5.3 How many times are the following loop bodies repeated? What is the output of each
+loop?
+//
+5.4 Suppose the input is 2 3 4 5 0. What is the output of the following code?
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+int number, max;
+number = input.nextInt();
+max = number;
+while (number != 0) {
+number = input.nextInt();
+if (number > max)
+max = number;
+}
+System.out.println("max is " + max);
+System.out.println("number " + number);
+}
+}
+//
+5.5 What is the output of the following code? Explain the reason.
+int x = 80000000;
+while (x > 0)
+x++;
+System.out.println("x is " + x);
+//
+5.6 Suppose the input is 2 3 4 5 0. What is the output of the following code?
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+int number, max;
+number = input.nextInt();
+max = number;
+do {
+number = input.nextInt();
+if (number > max)
+max = number;
+} while (number != 0);
+System.out.println("max is " + max);
+System.out.println("number " + number);
+}
+}
+//
+5.7 What are the differences between a while loop and a do-while loop? Convert the
+following while loop into a do-while loop.
+Scanner input = new Scanner(System.in);
+int sum = 0;
+System.out.println("Enter an integer " +
+"(the input ends if it is 0)");
+int number = input.nextInt();
+while (number != 0) {
+sum += number;
+System.out.println("Enter an integer " +
+"(the input ends if it is 0)");
+number = input.nextInt();
+}
+//
+5.8 Do the following two loops result in the same value in sum?
+//
+5.9 What are the three parts of a for loop control? Write a for loop that prints the numbers
+from 1 to 100.
+//
+5.10 Suppose the input is 2 3 4 5 0. What is the output of the following code?
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+int number, sum = 0, count;
+for (count = 0; count < 5; count++) {
+number = input.nextInt();
+sum += number;
+}
+System.out.println("sum is " + sum);
+System.out.println("count is " + count);
+}
+}
+*****************************************************/
+5.1:
+a)always true
+b)somtimes false
+c)always false
+5.2:
+It would be wrong if it is initialized to a value between 0 and 100, because it could be the number you attempt to guess.
+5.3:
+(a) Infinite number of times.
+(b) Infinite number of times.
+(c) The loop body is executed nine times. The output is 3, 5, 7, 9 on separate lines.
+5.4:
+max is 5
+number is 0
+5.5:
+x is -2147483648 
+The reason: When a variable is assigned a value that is too large (in size) to be stored, it causes overflow. 
+2147483647 + 1 is actually -2147483648
+5.6:
+max is 5 
+number 0
+5.7:
+the loop condition is checked after excuting code with the do-while loop
+5.8:
+Same. When the i++ and ++i are used in isolation, their effects are same.
+5.9:
+The first part initializes the control variable. The second part is a Boolean expression that determines whether the loop will repeat. The third part is the adjustment statement, which adjusts the control variable.
+5.10:
+sum is 14 
+count is 5 

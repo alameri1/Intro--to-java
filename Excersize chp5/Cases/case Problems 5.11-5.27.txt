@@ -1,0 +1,99 @@
+\*****************************************************
+5.11 What does the following statement do?
+for ( ; ; ) {
+// Do something
+}
+//
+5.12 If a variable is declared in a for loop control, can it be used after the loop exits?
+//
+5.13 Convert the following for loop statement to a while loop and to a do-while loop:
+long sum = 0;
+for (int i = 0; i <= 1000; i++)
+sum = sum + i;
+//
+5.14 Count the number of iterations in the following loops.
+//
+5.15 Can you convert a for loop to a while loop? List the advantages of using for loops.
+//
+5.16 Can you always convert a while loop into a for loop? Convert the following while
+loop into a for loop.
+int i = 1;
+int sum = 0;
+while (sum < 10000) {
+sum = sum + i;
+i++;
+}
+//
+5.17 Identify and fix the errors in the following code:
+1 public class Test {
+2 public void main(String[] args) {
+3 for (int i = 0; i < 10; i++);
+4 sum += i;
+5
+6 if (i < j);
+7 System.out.println(i)
+8 else
+9 System.out.println(j);
+10
+11 while (j < 10);
+12 {
+13 j++;
+14 }
+15
+16 do {
+17 j++;
+18 } while (j < 10)
+19 }
+20 }
+//
+5.18 What is wrong with the following programs?
+//
+5.19 How many times is the println statement executed?
+for (int i = 0; i < 10; i++)
+for (int j = 0; j < i; j++)
+System.out.println(i * j)
+//
+5.20 Show the output of the following programs. (Hint: Draw a table and list the variables
+in the columns to trace these programs.)
+//
+5.21 Will the program work if n1 and n2 are replaced by n1 / 2 and n2 / 2 in line 17
+in Listing 5.9?
+//
+5.22 In Listing 5.11, why is it wrong if you change the code (char)(hexValue + '0')
+to hexValue + '0' in line 21?
+//
+5.23 In Listing 5.11, how many times the loop body is executed for a decimal number 245
+and how many times the loop body is executed for a decimal number 3245?
+//
+5.24 What is the keyword break for? What is the keyword continue for? Will the following
+programs terminate? If so, give the output.
+//
+5.25 The for loop on the left is converted into the while loop on the right. What is
+wrong? Correct it.
+//
+5.26 Rewrite the programs TestBreak and TestContinue in Listings 5.12 and 5.13
+without using break and continue.
+//
+5.27 After the break statement in (a) is executed in the following loop, which statement
+is executed? Show the output. After the continue statement in (b) is executed in the
+following loop, which statement is executed? Show the output.
+//
+*****************************************************/
+5.11:
+
+5.12:
+5.13:
+5.14:
+5.15:
+5.16:
+5.17:
+5.18:
+5.19:
+5.20:
+5.21:
+5.22:
+5.23:
+5.24:
+5.25:
+5.26:
+5.27:
