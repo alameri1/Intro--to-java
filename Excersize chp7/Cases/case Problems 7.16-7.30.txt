@@ -1,0 +1,126 @@
+/****************************************************
+7.16 True or false? When an array is passed to a method, a new array is created and passed
+to the method.
+//
+7.17 Show the output of the following two programs:
+//
+7.18 Where are the arrays stored during execution? Show the contents of the stack and
+heap during and after executing displayArray, countLetters, displayCounts
+in Listing 7.4.
+//
+7.19 What is wrong in the following method header?
+public static void print(String... strings, double... numbers)
+public static void print(double... numbers, String name)
+public static double... print(double d1, double d2)
+//
+7.20 Can you invoke the printMax method in Listing 7.5 using the following statements?
+printMax(1, 2, 2, 1, 4);
+printMax(new double[]{1, 2, 3});
+printMax(new int[]{1, 2, 3});
+//
+
+7.21 If high is a very large integer such as the maximum int value 2147483647, (low
++ high) / 2 may cause overflow. How do you fix it to avoid overflow?
+//
+7.22 Use Figure 7.9 as an example to show how to apply the binary search approach to a
+search for key 10 and key 12 in list {2, 4, 7, 10, 11, 45, 50, 59, 60, 66, 69, 70, 79}.
+//
+7.23 If the binary search method returns -4, is the key in the list? Where should the key
+be inserted if you wish to insert the key into the list?
+//
+7.24 Use Figure 7.11 as an example to show how to apply the selection-sort approach to
+sort {3.4, 5, 3, 3.5, 2.2, 1.9, 2}.
+//
+7.25 How do you modify the selectionSort method in Listing 7.8 to sort numbers in
+decreasing order?
+//
+7.26 What types of array can be sorted using the java.util.Arrays.sort method?
+Does this sort method create a new array?
+//
+7.27 To apply java.util.Arrays.binarySearch(array, key), should the array
+be sorted in increasing order, in decreasing order, or neither?
+//
+7.28 Show the output of the following code:
+int[] list1 = {2, 4, 7, 10};
+java.util.Arrays.fill(list1, 7);
+System.out.println(java.util.Arrays.toString(list1));
+int[] list2 = {2, 4, 7, 10};
+System.out.println(java.util.Arrays.toString(list2));
+System.out.print(java.util.Arrays.equals(list1, list2));
+//
+7.29 This book declares the main method as
+public static void main(String[] args)
+Can it be replaced by one of the following lines?
+public static void main(String args[])
+public static void main(String[] x)
+//
+7.30 Show the output of the following program when invoked using
+1. java Test I have a dream
+2. java Test “1 2 3”
+3. java Test
+public class Test {
+public static void main(String[] args) {
+System.out.println("Number of strings is " + args.length);
+for (int i = 0; i < args.length; i++)
+System.out.println(args[i]);
+}
+}
+****************************************************/
+7.16:
+False. When an array is passed to a method, the reference value of the array is passed. No new array is created. Both argument and parameter point to the same array.
+7.17:
+(a)	number is 0 and numbers[0] is 3 
+(b)	1 2 3 4 5
+
+7.18:
+UML*
+7.19:
+Only one variable-length parameter may be specified in a method and this parameter must be the last parameter. The method return type cannot be a variable-length parameter.
+7.20:
+The last one
+printMax(new int[]{1, 2, 3});
+            
+is incorrect, because the array must of the double[] type.
+7.21:
+Replace (low + high) / 2 with (-low + high) / 2 + low
+7.22:
+Omitted
+7.23:
+The key is not in the list. The key should be inserted at -(-4 + 1) = 3.
+7.24:
+Omitted
+7.25:
+Omitted
+7.26:
+You can sort an array of any primitive types except boolean. The sort method is void, so it does not return a new array.
+7.27:
+To apply java.util.Arrays.binarySearch(array, key), the array must be sorted in increasing order.
+7.28:
+[7, 7, 7, 7]
+[2, 4, 7, 10]
+False
+7.29:
+public static void main(String[] args)
+can be replaced by
+public static void main(String args[])
+
+public static void main(String[] x)
+
+public static void main(String x[])
+but not
+static void main(String x[])
+because it is not public.
+7.30:
+(1) 
+Number of strings is 4
+I
+have
+a
+dream
+
+(2) 
+Number of strings is 1
+1 2 3
+
+(3) 
+Number of strings is 0

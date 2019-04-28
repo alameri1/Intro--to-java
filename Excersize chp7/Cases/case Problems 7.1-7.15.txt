@@ -1,0 +1,169 @@
+/****************************************************
+7.1 How do you declare an array reference variable and how do you create an array?
+//
+7.2 When is the memory allocated for an array?
+//
+7.3 What is the output of the following code?
+int x = 30;
+int[] numbers = new int[x];
+x = 60;
+System.out.println("x is " + x);
+System.out.println("The size of numbers is " + numbers.length);
+//
+7.4 Indicate true or false for the following statements:
+¦ Every element in an array has the same type.
+¦ The array size is fixed after an array reference variable is declared.
+¦ The array size is fixed after it is created.
+¦ The elements in an array must be a primitive data type.
+//
+7.5 Which of the following statements are valid?
+int i = new int(30);
+double d[] = new double[30];
+char[] r = new char(1..30);
+int i[] = (3, 4, 3, 2);
+float f[] = {2.3, 4.5, 6.6};
+char[] c = new char();
+//
+7.6 How do you access elements in an array?
+//
+7.7 What is the array index type? What is the lowest index? What is the representation of
+the third element in an array named a?
+//
+7.8 Write statements to do the following:
+a. Create an array to hold 10 double values.
+b. Assign the value 5.5 to the last element in the array.
+c. Display the sum of the first two elements.
+d. Write a loop that computes the sum of all elements in the array.
+e. Write a loop that finds the minimum element in the array.
+f. Randomly generate an index and display the element of this index in the array.
+g. Use an array initializer to create another array with the initial values 3.5, 5.5,
+4.52, and 5.6.
+//
+7.9 What happens when your program attempts to access an array element with an invalid
+index?
+7.10 Identify and fix the errors in the following code:
+1 public class Test {
+2 public static void main(String[] args) {
+3 double[100] r;
+4
+5 for (int i = 0; i < r.length(); i++);
+6 r(i) = Math.random * 100;
+7 }
+8 }
+//
+7.11 What is the output of the following code?
+1 public class Test {
+2 public static void main(String[] args) {
+3 int list[] = {1, 2, 3, 4, 5, 6};
+4 for (int i = 1; i < list.length; i++)
+5 list[i] = list[i - 1];
+6
+7 for (int i = 0; i < list.length; i++)
+8 System.out.print(list[i] + " ");
+9 }
+10 }
+//
+7.12 Will the program pick four random cards if you replace lines 22–27 in Listing 7.2
+DeckOfCards.java with the following code?
+for (int i = 0; i < 4; i++) {
+int cardNumber = (int)(Math.random() * deck.length);
+String suit = suits[cardNumber / 13];
+String rank = ranks[cardNumber % 13];
+System.out.println("Card number " + cardNumber + ": "
++ rank + " of " + suit);
+}
+//
+7.13 Use the arraycopy method to copy the following array to a target array t:
+int[] source = {3, 4, 5};
+//
+7.14 Once an array is created, its size cannot be changed. Does the following code resize
+the array?
+int[] myList;
+myList = new int[10];
+// Sometime later you want to assign a new array to myList
+myList = new int[20];
+//
+7.15 Suppose the following code is written to reverse the contents in an array, explain
+why it is wrong. How do you fix it?
+int[] list = {1, 2, 3, 5, 4};
+for (int i = 0, j = list.length - 1; i < list.length; i++, j--) {
+// Swap list[i] with list[j]
+int temp = list[i];
+list[i] = list[j];
+list[j] = temp;
+}
+****************************************************/
+7.1:
+See the section "Array Basics."
+
+7.2:
+The memory is allocated when an array is created.
+7.3:
+x is 60
+The size of numbers is 30
+7.4:
+(a)	Answer: True 
+(b) Answer: False 
+(c) Answer: True 
+(d) Answer: False
+7.5:
+int i = new int(30);
+Answer: Invalid
+
+double d[] = new double[30];
+Answer: Valid
+
+char[] r = new char(1..30);
+Answer: Invalid
+
+int i[] = (3, 4, 3, 2);
+Answer: Invalid
+
+float f[] = {2.3, 4.5, 5.6};
+Answer: Valid
+
+char[] c = new char();
+Answer: Invalid
+7.6:
+You access an array using its index. arrayRefVar[index] is known as an array indexed variable.
+7.7:
+The array index type is int and its lowest index is 0.
+a[2]
+7.8:
+(a)  	double[] list = new double[10];
+(b)  	list[list.length - 1] = 5.5;
+(c)  	System.out.println(list[0] + list[1]);
+(d)  	double sum = 0;
+        for (int i = 0; i < list.length; i++)
+          sum += list[i];
+(e)     double min = list[0];
+        for (int i = 1; i < list.length; i++)
+           if (min > list[i])  min = list[i];
+(f)     System.out.println(list[(int)(Math.random() * list.length)]);
+(g)     double[] list = {3.5, 5.5, 4.52, 5.6};
+7.9:
+A runtime exception ArrayIndexOutOfBounds occurs.
+7.10:
+Line 3: the array declaration is wrong. It should be double[]. The array needs to be created before its been used. e.g. new double[10] 
+Line 5: The semicolon (;) at the end of the for loop heading should be removed. 
+Line 5: r.length() should be r.length. 
+Line 6: random should be random() 
+Line 6: r(i) should be r[i].
+7.11:
+1 1 1 1 1 1 
+7.12:
+No. You may have the same card appearing more than once.
+7.13:
+System.arraycopy(source, 0, t, 0, source.length);
+7.14:
+The second assignment statement myList = new int[20] creates a new array and assigns its reference to myList. 
+7.15:
+It swaps the elements twice. For example, the first element is swapped with the last element once and then the last element is swapped with the first element another time. In effect, the elements are not swapped. Here is the fix:
+int[] list = {1, 2, 3, 5, 4};
+
+for (int i = 0, j = list.length - 1; i < list.length / 2; i++, j--) {
+  // Swap list[i] with list[j]
+  int temp = list[i];
+  list[i] = list[j];
+  list[j] = temp;
+}
