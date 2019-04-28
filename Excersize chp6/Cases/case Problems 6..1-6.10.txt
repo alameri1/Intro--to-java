@@ -1,0 +1,90 @@
+\*****************************************************
+6.1 What are the benefits of using a method?
+6.2 How do you define a method? How do you invoke a method?
+6.3 How do you simplify the max method in Listing 6.1 using the conditional operator?
+6.4 True or false? A call to a method with a void return type is always a statement itself,
+but a call to a value-returning method cannot be a statement by itself.
+6.5 What is the return type of a main method?
+6.6 What would be wrong with not writing a return statement in a value-returning
+method? Can you have a return statement in a void method? Does the return
+statement in the following method cause syntax errors?
+public static void xMethod(double x, double y) {
+System.out.println(x + y);
+return x + y;
+}
+6.7 Define the terms parameter, argument, and method signature.
+6.8 Write method headers (not the bodies) for the following methods:
+a. Return a sales commission, given the sales amount and the commission rate.
+b. Display the calendar for a month, given the month and year.
+c. Return a square root of a number.
+d. Test whether a number is even, and returning true if it is.
+e. Display a message a specified number of times.
+f. Return the monthly payment, given the loan amount, number of years, and annual
+interest rate.
+g. Return the corresponding uppercase letter, given a lowercase letter.
+6.9 Identify and correct the errors in the following program:
+1 public class Test {
+2 public static method1(int n, m) {
+3 n += m;
+4 method2(3.4);
+5 }
+6
+7 public static int method2(int n) {
+8 if (n > 0) return 1;
+9 else if (n == 0) return 0;
+10 else if (n < 0) return –1;
+11 }
+12 }
+6.10 Reformat the following program according to the programming style and documentation
+guidelines proposed in Section 1.9, Programming Style and Documentation.
+Use the next-line brace style.
+public class Test {
+public static double method(double i, double j)
+{
+while (i < j) {
+j--;
+}
+return j;
+}
+}
+
+*****************************************************/
+6.1:
+At least three benefits: (1) Reuse code; (2) Reduce complexity; (3) Easy to maintain.
+6.2:
+See the Sections 6.2 and 6.3 on how to define and invoke methods.
+
+6.3:
+return (num1 > num2) ? num1 : num2;
+6.4:
+True: a call to a method with a void return type is always a statement itself. 
+False: a call to a value-returning method is always a component of an expression. Note that a value-returning method can also be invoked as a statement in Java. In this case, the caller simply ignores the return value.
+6.5:
+void
+6.6:
+A syntax error occurs if a return statement is not used to return a value in a value-returning method. You can have a return statement in a void method, which simply exits the method. But a return statement cannot return a value such as return x + y in a void method.
+6.7:
+See Section 6.2.
+6.8:
+(a) public static double getCommission(double salesAmount, double commissionRate) 
+(b) public static void printCalendar(int month, int year) 
+(c) public static double sqrt(double value) 
+(d) public static boolean isEven(int value) 
+(e) public static void printMessage(String message, int times) 
+(f) public static double monthlyPayment(double loan, int numberOfYears, double annualInterestRate) 
+(g) public static char getUpperCase(char letter)
+6.9:
+Line 2: method1 is not defined correctly. It does not have a return type or void. 
+Line 2: type int should be declared for parameter m. 
+Line 7: parameter type for n should be double to match method2(3.4). 
+Line 11: if (n < 0) should be removed in method, otherwise a compile error is reported.
+6.10:
+public class Test {
+  public static double xMethod(double i, double j) {
+    while (i < j) {
+      j--;
+    } 
+
+    return j;
+  }
+}

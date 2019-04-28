@@ -1,0 +1,90 @@
+\*****************************************************
+6.11 How is an argument passed to a method? Can the argument have the same name as
+its parameter?
+6.12 Identify and correct the errors in the following program:
+1 public class Test {
+2 public static void main(String[] args) {
+3 nPrintln(5, "Welcome to Java!");
+4 }
+5
+6 public static void nPrintln(String message, int n) {
+7 int n = 1;
+8 for (int i = 0; i < n; i++)
+9 System.out.println(message);
+10 }
+11 }
+6.13 What is pass-by-value? Show the result of the following programs.
+6.14 For (a) in the preceding question, show the contents of the activation records in the
+call stack just before the method max is invoked, just as max is entered, just before
+max is returned, and right after max is returned.
+6.15 What is method overloading? Is it permissible to define two methods that have the
+same name but different parameter types? Is it permissible to define two methods in a
+class that have identical method names and parameter lists but different return value
+types or different modifiers?
+6.16 What is wrong in the following program?
+public class Test {
+public static void method(int x) {
+}
+public static int method(int y) {
+return y;
+}
+}
+
+6.17 Given two method definitions,
+public static double m(double x, double y)
+public static double m(int x, double y)
+tell which of the two methods is invoked for:
+a. double z = m(4, 5);
+b. double z = m(4, 5.4);
+c. double z = m(4.5, 5.4);
+6.18 What is a local variable?
+6.19 What is the scope of a local variable?
+*****************************************************/
+6.11:
+You pass actual parameters by passing the right type of value in the right order. The actual parameter can have the same name as its formal parameter.
+6.12:
+Two errors: 1. the arguments are not passed in the right order. 2. n is a parameter, but is redeclared in the nPrintln method in line 7.
+
+6.13:
+"Pass by value" is to pass a copy of the value to the method. 
+(a) The output of the program is 0, because the variable max is not changed by invoking the method max.
+
+(b)
+2  
+2 4  
+2 4 8  
+2 4 8 16  
+2 4 8 16 32  
+2 4 8 16 32 64
+
+(c)
+Before the call, variable times is 3
+n = 3
+Welcome to Java!
+n = 2
+Welcome to Java!
+n = 1             
+Welcome to Java!             
+After the call, variable times is 3 
+
+(d)
+            
+1 
+2 1 
+2 1 
+4 2 1 
+i is 5
+
+6.14:
+UML needed*
+6.15:
+Two methods with the same name, defined in the same class, is called method overloading. It is fine to have same method name, but different parameter types. You cannot overload methods based on return type, or modifiers.
+
+6.16:
+Methods public static void method(int x) and public static int method(int y) have the same signature method(int).
+6.17:
+(a) invokes the second method. (b) invokes the second. (c) invokes the first method.
+6.18:
+A local variable is a variable declared inside a method.
+6.19:
+The scope of a local variable starts from its declaration and continues to the end of the block that contains the variable.
