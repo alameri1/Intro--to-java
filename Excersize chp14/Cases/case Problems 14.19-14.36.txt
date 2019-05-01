@@ -1,0 +1,67 @@
+\*****************************************************
+14.19 How do you create an Image from a URL or a filename?
+//
+14.20 How do you create an ImageView from an Image, or directly from a file or a URL?
+//
+14.21 Can you set an Image to multiple ImageView? Can you display the same ImageView
+multiple times?
+//
+14.22 How do you add a node to a Pane, StackPane, FlowPane, GridPane, BorderPane,
+HBox, and VBox? How do you remove a node from these panes?
+//
+14.23 How do you set the alignment to right for nodes in a FlowPane, GridPane, HBox,
+and VBox?
+//
+14.24 How do you set the horizontal gap and vertical hap between nodes in 8 pixels in a
+FlowPane and GridPane and set spacing in 8 pixels in an HBox and VBox?
+//
+14.25 How do you get the column and row index of a node in a GridPane? How do you
+reposition a node in a GridPane?
+//
+14.26 What are the differences between a FlowPane and an HBox or a VBox?
+//
+14.27 How do you display a text, line, rectangle, circle, ellipse, arc, polygon, and polyline?
+//
+14.28 Write code fragments to display a string rotated 45 degrees in the center of the pane.
+//
+14.29 Write code fragments to display a thick line of 10 pixels from (10, 10) to (70, 30).
+//
+14.30 Write code fragments to fill red color in a rectangle of width 100 and height 50 with
+the upper-left corner at (10, 10).
+//
+14.31 Write code fragments to display a round-cornered rectangle with width 100, height
+200 with the upper-left corner at (10, 10), corner horizontal diameter 40, and corner
+vertical diameter 20.
+//
+14.32 Write code fragments to display an ellipse with horizontal radius 50 and vertical
+radius 100.
+//
+14.33 Write code fragments to display the outline of the upper half of a circle with radius 50.
+//
+14.34 Write code fragments to display the lower half of a circle with radius 50 filled with
+the red color.
+//
+14.35 Write code fragments to display a polygon connecting the following points: (20, 40),
+(30, 50), (40, 90), (90, 10), (10, 30), and fill the polygon with green color.
+//
+14.36 Write code fragments to display a polyline connecting the following points: (20, 40),
+(30, 50), (40, 90), (90, 10), (10, 30).
+*****************************************************/
+14.19:
+14.20:
+14.21:
+14.22:
+14.23:
+14.24:
+14.25:
+14.26:
+14.27:
+14.28:
+14.29:
+14.30:
+14.31:
+14.32:
+14.33:
+14.34:
+14.35:
+14.36:

@@ -1,0 +1,95 @@
+\*****************************************************
+14.1 Explain the evolution of Java GUI technologies.
+//
+14.2 Explain why this book teaches Java GUI using JavaFX.
+//
+14.3 How do you define a JavaFX main class? What is the signature of the start method?
+What is a stage? What is a primary stage? Is a primary stage automatically created?
+How do you display a stage? Can you prevent the user from resizing the stage? Can you
+replace Application.launch(args) by launch(args) in line 22 in Listing 14.1?
+//
+14.4 Show the output of the following JavaFX program.
+import javafx.application.Application;
+import javafx.stage.Stage;
+public class Test extends Application {
+public Test() {
+System.out.println("Test constructor is invoked");
+}
+@Override // Override the start method in the Application class
+public void start(Stage primaryStage) {
+System.out.println("start method is invoked");
+}
+public static void main(String[] args) {
+System.out.println("launch application");
+Application.launch(args);
+}
+}
+//
+14.5 How do you create a Scene object? How do you set a scene in a stage? How do you
+place a circle into a scene?
+//
+14.6 What is a pane? What is a node? How do you place a node in a pane? Can you directly
+place a Shape or an ImageView into a Scene? Can you directly place a Control or
+a Pane into a Scene?
+//
+14.7 How do you create a Circle? How do you set its center location and radius? How
+do you set its stroke color and fill color?
+//
+14.8 What is a binding property? What interface defines a binding property? What interface
+defines a source object? What are the binding object types for int, long,
+float, double, and boolean? Are Integer and Double binding properties? Can
+Integer and Double be used as source objects in a binding?
+//
+14.9 Following the JavaFX binding property naming convention, for a binding property
+named age of the IntegerProperty type, what is its value getter method, value
+setter method, and property getter method?
+//
+14.10 Can you create an object of IntegerProperty using new IntegerProperty(3)?
+If not, what is the correct way to create it? What will the output if line 8 is replaced
+by d1.bind(d2.multiply(2)) in Listing 14.6? What will the output if line 8 is
+replaced by d1.bind(d2.add(2)) in Listing 14.6?
+//
+14.11 What is a unidirectional binding and what is bidirectional binding? Are all binding
+properties capable of bidirectional binding? Write a statement to bind property d1
+with property d2 bidirectionally.
+//
+14.12 How do you set a style of a node with border color red? Modify the code to set the
+text color for the button to red.
+//
+14.13 Can you rotate a pane, a text, or a button? Modify the code to rotate the button 15
+degrees counterclockwise?
+//
+14.14 How do you create a color? What is wrong about creating a Color using new
+Color(1.2, 2.3, 3.5, 4)? Which of two colors is darker, new Color(0, 0,
+0, 1) or new Color(1, 1, 1, 1)? Does invoking c.darker() change the color
+value in c?
+//
+14.15 How do you create a Color object with a random color?
+//
+14.16 How do you set a circle object c with blue fill color using the setFill method and
+using the setStyle method?
+//
+14.17 How do you create a Font object with font name Courier, size 20, and weight
+bold?
+//
+14.18 How do you find all available fonts on your system?
+*****************************************************/
+14.1:
+14.2:
+14.3:
+14.4:
+14.5:
+14.6:
+14.7:
+14.8:
+14.9:
+14.10:
+14.11:
+14.12:
+14.13:
+14.14:
+14.15:
+14.16:
+14.17:
+14.18:
+
