@@ -1,0 +1,126 @@
+\*****************************************************
+15.1 What is an event source object? What is an event object? Describe the relationship
+between an event source object and an event object.
+//
+15.2 Can a button fire a MouseEvent? Can a button fire a KeyEvent? Can a button fire
+an ActionEvent?
+//
+15.3 Why must a handler be an instance of an appropriate handler interface?
+//
+15.4 Explain how to register a handler object and how to implement a handler interface.
+//
+15.5 What is the handler method for the EventHandler<ActionEvent> interface?
+//
+15.6 What is the registration method for a button to register an ActionEvent handler?
+//
+15.7 Can an inner class be used in a class other than the class in which it nests?
+//
+15.8 Can the modifiers public, protected, private, and static be used for inner
+classes?
+//
+15.9 If class A is an inner class in class B, what is the .class file for A? If class B contains
+two anonymous inner classes, what are the .class file names for these two classes?
+//
+15.10 What is wrong in the following code?
+//
+15.11 What is a lambda expression? What is the benefit of using lambda expressions for
+event handling? What is the syntax of a lambda expression?
+//
+15.12 What is a functional interface? Why is a functional interface required for a lambda
+expression?
+//
+15.13 Show the output of the following code:
+public class Test {
+public static void main(String[] args) {
+Test test = new Test();
+test.setAction1(() -> System.out.print("Action 1! "));
+test.setAction2(e -> System.out.print(e + " "));
+System.out.println(test.setAction3(e -> e * 2));
+}
+public void setAction1(T1 t) {
+t.m();
+}
+public void setAction2(T2 t) {
+t.m(4.5);
+}
+public double setAction3(T3 t) {
+return t.m(5.5);
+}
+}
+interface T1 {
+public void m();
+}
+interface T2 {
+public void m(Double d);
+}
+interface T3 {
+public double m(Double d);
+}
+//
+15.14 What method do you use to get the mouse-point position for a mouse event?
+//
+15.15 What methods do you use to register a handler for a mouse pressed, released, clicked,
+entered, exited, moved and dragged event?
+//
+15.16 What methods do you use to register handlers for key pressed, key released, and key
+typed events? In which classes are these methods defined? (See Table 15.1)
+//
+15.17 What method do you use to get the key character for a key-typed event? What method
+do you use to get the key code for a key-pressed or key-released event?
+//
+15.18 How do you set focus on a node so it can listen for key events?
+//
+15.19 What would happen if you replace pane with scene or primaryStage in lines 29
+and 33?
+//
+15.20 How do you set the cycle count of an animation to infinite? How do you auto reverse
+an animation? How do you start, pause, and stop an animation?
+//
+15.21 Are PathTransition, FadeTransition, and Timeline a subtype of Animation?
+//
+15.22 How do you create a PathTransition? How do you create a FadeTransition?
+How do you create a Timeline?
+//
+15.23 How do you create a KeyFrame?
+//
+15.24 How does the program make the ball moving?
+//
+15.25 How does the code in Listing 15.17 BallPane.java change the direction of the ball
+movement?
+//
+15.26 What does the program do when the mouse is pressed on the ball pane? What does
+the program do when the mouse is released on the ball pane?
+//
+15.27 If line 32 in Listing 15.18 BounceBallControl.java is not in the program, what would
+happen when you press the UP or the DOWN arrow key?
+//
+15.28 If line 23 is not in Listing 15.17, what would happen?
+*****************************************************/
+15.1:
+15.2:
+15.3:
+15.4:
+15.5:
+15.6:
+15.7:
+15.8:
+15.9:
+15.10:
+15.11:
+15.12:
+15.13:
+15.14:
+15.15:
+15.16:
+15.17:
+15.18:
+15.19:
+15.20:
+15.21:
+15.22:
+15.23:
+15.24:
+15.25:
+15.26:
+15.27:
+15.28:
