@@ -164,19 +164,64 @@ Test.id = 45;
 }
 *****************************************************/
 9.18:
+Add static in the main method and in the factorial method because these two methods don't need reference any instance objects or invoke any instance methods in the Test class.
 9.19:
+1. You cannot invoke an instance method or reference an instance variable from a static method. 
+2. You can invoke a static method or reference a static variable from an instance method. 
+3. (a) The main method is static and cannot invoke the instance method method1. (b) c is an instance variable, which cannot be accessed from the static context in method2.
 9.20:
+Accessor method is for retrieving private data value and mutator method is for changing private data value. The naming convention for accessor method is getDataFieldName() for non-boolean values and isDataFieldName() for boolean values. The naming convention for mutator method is setDataFieldName(value).
 9.21:
+Two benefits: (1) for protecting data and (2) for easy to maintain the class.
 9.22:
+Not a problem. Though radius is private, myCircle.radius is used inside the Circle class. Thus, it is fine.
 9.23:
+Java uses "pass by value" to pass parameters to a method. When passing a variable of a primitive type to a method, the variable remains unchanged after the method finishes. However, when passing a variable of a reference type to a method, any changes to the object referenced by the variable inside the method are permanent changes to the object referenced by the variable outside of the method. Both the actual parameter and the formal parameter variables reference to the same object.The output of the program is as follows:
+count 101
+times 0
+
 9.24:
+after swap1: circle1 = 1.0 circle2 = 2.0
+After swap2: circle1 = 2.0 circle2 = 1.0
+Remark: The reference value of circle1 is passed to x and the reference value of circle2 is passed to y. The contents of the objects are not swapped in the swap1 method. circle1 and circle2 are not swapped. To actually swap the contents of these objects, replace the following three lines
+Circle temp = x;
+x =y;
+y =temp;
+by
+double temp = x.radius;
+x.radius = y.radius;
+y.radius = temp;
+as in swap2.
 9.25:
+a. a[0] = 1 a[1] = 2
+b. a[0] = 2 a[1] = 1
+c. e1 = 2 e2 = 1
+d. t1's i = 2 t1's j = 1 
+   t2's i = 2 t2's j = 1
 9.26:
+(a) null
+(b) 1234567
+(c) 7654321
+(d) 1234567
+Note that Java passes the value to an argument when invoking a method. In (a) and (b), the reference of a Date object is passed to a Date parameter in method m1. The method assigns a Date object to variable date. The variable date is changed in method m1, but it does not change date in the main method. Same is as in (d). 
+In (c), the main method invokes m1 by passing the reference of the Date object. Method m1 sets a new time in the Date object. Since the reference variable date in both the main method and m1 point to the same Date object, a new time is set in method m1 using setTime(7654321), the getTime() is used to retrieve this time from the same object in the main method.
 9.27:
+(Line 4 prints null since dates[0] is null. Line 5 causes a NullPointerException since it invokes toString() method from the null reference.)
 9.28:
+Not necessarily. To be immutable, the class must also contain no getter methods that would return a reference to a mutable data field object.
 9.29:
+Yes
 9.30:
+No, because values is a reference type.
 9.31:
+i + j is 23 (because i (value of 2) is concatenated with string i + j is, then j (value of 3) is concatenated with string i + j is 2.)
+k is 2
+j is 0
+
 9.32:
+this refers to the object itself
 9.33:
+Swap line 5 with line 6 
+Lines 10, 14, should be this.p = p;
 9.34:
+Test.id = 45; This is wrong, since id is an instance member and cannot be accessed from a class.
